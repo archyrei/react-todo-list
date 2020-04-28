@@ -1,4 +1,154 @@
-.App {
-  font-family: sans-serif;
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --another-blue: #40739e;
+  --black-pearl: #1e272e;
+  --storm: #8395a7;
+  --dark: #2d3436;
+  --grey: #636e72;
+}
+
+.another-blue {
+  color: var(--another-blue);
+}
+
+.black-pearl {
+  color: var(--black-pearl);
+}
+
+.dark {
+  color: var(--dark);
+}
+
+.grey {
+  color: var(--grey);
+}
+
+.storm {
+  color: var(--storm);
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+
+  background-color: var(--dark);
+  height: 100vh;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.container {
+  height: 600px;
+  width: 700px;
+  background-color: #dcdde1;
+  border-radius: 2px;
+  padding: 32px;
+}
+
+.frame {
+  border: 1px solid var(--grey);
+  border-radius: 2px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+
+.header-title {
+  flex: 1;
   text-align: center;
+  font-size: 3.6rem;
+  font-family: "Bebas Neue", cursive;
+  text-transform: lowercase;
+  color: var(--black-pearl);
+}
+
+.header-btn {
+  font-size: 1.8rem;
+  font-family: "Economica", sans-serif;
+  text-transform: uppercase;
+  padding: 18px;
+  background: unset;
+  border: unset;
+  outline: unset;
+}
+
+.header-btn:active {
+  text-shadow: 1px 1px 1px var(--black-pearl);
+}
+
+.add {
+  padding: 16px;
+}
+
+.add-form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.add-input {
+  border: unset;
+  background: unset;
+  outline: unset;
+  padding: 0 64px;
+  border-bottom: 2px solid var(--another-blue);
+  font-family: "Economica", sans-serif;
+  font-size: 1.6rem;
+  text-transform: lowercase;
+  flex: 1;
+}
+
+.add-btn {
+  border: unset;
+  background: unset;
+  padding: 2px;
+  padding-left: 14px;
+  font-family: "Economica", sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+
+.add-btn:active {
+  text-shadow: 1px 1px 1px var(--black-pearl);
+}
+
+.list-todo {
+  display: flex;
+  flex-direction: column;
+}
+
+.todo {
+  position: relative;
+  flex: 1 0 auto;
+  text-align: center;
+  min-height: 30px;
+  margin: 14px 0px 0px;
+  font-family: "Economica", sans-serif;
+  font-size: 24px;
+  border-bottom: 1px solid var(--storm);
+}
+
+.todo-text {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
 }
