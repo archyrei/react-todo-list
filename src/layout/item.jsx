@@ -9,7 +9,7 @@ const Item = props => {
   );
 };
 
-Item.PropTypes = {
+Item.propTypes = {
   text: PropTypes.string.isRequired
 };
 
