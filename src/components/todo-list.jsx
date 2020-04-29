@@ -1,33 +1,8 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Item from "../layout/item";
 
-const List = () => {
-  const acts = [
-    {
-      text: "Belajar masak"
-    },
-    {
-      text: "Menyiapkan sarapan"
-    },
-    {
-      text: "Brewing kopi"
-    },
-    {
-      text: "Cari resep kopi"
-    },
-    {
-      text: "Baca buku"
-    },
-    {
-      text: "Belajar masak"
-    },
-    {
-      text: "Membuat makan siang"
-    },
-    {
-      text: "Monitoring kedai"
-    }
-  ];
+const List = ({ acts }) => {
   return (
     <section className="list-todo">
       {acts.map(act => {
@@ -35,6 +10,14 @@ const List = () => {
       })}
     </section>
   );
+};
+
+List.propTypes = {
+  acts: PropTypes.arrayOf(
+    PropTypes.shape({
+      text: PropTypes.string
+    })
+  )
 };
 
 export default List;
